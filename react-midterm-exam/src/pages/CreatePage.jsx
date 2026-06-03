@@ -1,3 +1,9 @@
+import TodoForm from "../components/TodoForm";
+
 export default function CreatePage() {
-  return <div>CreatePage</div>;
+  return (
+    <div>
+      <TodoForm />
+    </div>
+  );
 }
