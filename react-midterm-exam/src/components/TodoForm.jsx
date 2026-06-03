@@ -18,8 +18,11 @@ export default function TodoForm() {
     navigate("/notes");
   };
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form action="" onSubmit={handleSubmit} className="flex flex-col p-6">
+      <h1>Note content</h1>
+      <p>Use a clear title and add the detail you want to keep.</p>
       <div>
+        <span>title (หัวข้อ) *</span>
         <input
           type="text"
           onChange={(e) => setTitle(e.target.value)}
@@ -28,6 +31,7 @@ export default function TodoForm() {
         />
       </div>
       <div>
+        <span>content (เนื้อหา) *</span>
         <input
           type="text"
           onChange={(e) => setContent(e.target.value)}
@@ -35,9 +39,9 @@ export default function TodoForm() {
           className="border"
         />
       </div>
-      <div>
-        <button type="submit">SAVE</button>
-        <Link to="/notes">CANCEL</Link>
+      <div className="flex justify-between p-6">
+        <Link to="/notes">Back</Link>
+        <button type="submit">Create Note</button>
       </div>
     </form>
   );

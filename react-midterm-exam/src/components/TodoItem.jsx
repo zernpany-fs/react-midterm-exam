@@ -6,7 +6,7 @@ export default function TodoItem({ id, title, content }) {
   return (
     <li className="flex items-center justify-between border rounded-lg p-4">
       <label htmlFor="">
-        <h2>{title}</h2>
+        <h2 className="text-lg font-bold">{title}</h2>
         <p>{content}</p>
       </label>
       <nav className="flex gap-2">
